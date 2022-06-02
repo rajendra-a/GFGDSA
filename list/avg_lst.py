@@ -13,3 +13,4 @@ print(avg_lst([1, 2, 3, 4]))
 def avg_lst(l):
     return sum(l)/len(l)
 
+
