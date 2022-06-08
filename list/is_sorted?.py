@@ -32,17 +32,8 @@ def isSorted(self,arr,n):
         if i == n or j == n:
             return 1
         return 0
-# Rotate list by n places
-def rotate_by(l, d):
-    return l[d:] + l[:d]
 
 
-from collections import deque
-l = [10, 30, 40, 40, 30]
-d = 2
-dq = deque(l)
-dq.rotate(-d)
-l = list(dq)
-print(l)
+print(all(l[i] <= l[i+1] for i in range(len(l-1))))
 
 

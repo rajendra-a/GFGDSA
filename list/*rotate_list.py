@@ -44,3 +44,24 @@ def rotate(l, d):
         l.append(A[i])
     del l[:d]
     return l
+
+def rotate_list(l, d):
+    for i in range(d):
+        x = l[0]
+        for i in range(len(l)-1):
+            l[i] = l[i+1]
+        l[len(l)-1] = x
+    return l
+
+# Rotate list by d places
+def rotate_by(l, d):
+    return l[d:] + l[:d]
+
+
+from collections import deque
+l = [10, 30, 40, 40, 30]
+d = 2
+dq = deque(l)
+dq.rotate(-d)
+l = list(dq)
+print(l)
