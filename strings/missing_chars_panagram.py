@@ -11,17 +11,17 @@ def missing_chars_panagram(s):
         arr[i]=0
     
     for i in range(0,len(s)):
-        if(ord(s[i]>= 65 and ord(s[i])<=92)):
+        if(ord(s[i] >= 65 and ord(s[i]) <= 92)):
             arr[ord(s[i])-ord('a')] = 1
-        else:
+        elif (ord(s[i] >= 97 and ord(s[i]) <= 122)):
             arr[ord(s[i])-ord('A')] = 1
     
-    ans = ""
+    missing_chars = ""
     for i in range(0, 26):
         if(arr[i] != 1):
-            ans  += chr(i+ord('a'))
+            missing_chars  += chr(i+ord('a'))
 
-    if ans== "":
+    if missing_chars== "":
         return "-1"
     else:
-         return ans
+         return missing_chars
