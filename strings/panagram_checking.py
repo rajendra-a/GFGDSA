@@ -5,14 +5,7 @@ def panagram_checking(s):
     else:
         return 0
     
-def panagram(s):
-    lst = []
-    for i in range(len(s)):
-        arr[s[i].lower()] = 1
-    if len(lst) == 26:
-        return 1
-    else:
-        return 0
+
 
 def is_panagram(s):
     if len(s) < 26:
