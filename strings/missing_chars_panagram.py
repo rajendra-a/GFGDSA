@@ -19,7 +19,7 @@ def missing_chars_panagram(s):
     ans = ""
     for i in range(0, 26):
         if(arr[i] != 1):
-            ans  = chr(i+ord('a'))
+            ans  += chr(i+ord('a'))
 
     if ans== "":
         return "-1"
